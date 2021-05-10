@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+{% load static %}
+<html>
+
+<head>
+<meta charset='utf-8'>
+<style>
+body{
+		background-color:#002850;
+		width: 1180px;
+		margin: auto;
+	}
+
+span{ color: white;
+    text-align : center;
+    font-size: xx-large;
+    }
+
+.mainbox{
+    display: flex;
+    justify-content: space-evenly;
+   /* flex-direction: column;
+    align-items: center;*/
+    padding-top: 100px;
+}
+.box1{
+/*	margin-right: 900px;
+    margin-left: 100px;
+    margin-bottom: 30px;*/
+    background-color: white;
+    padding-bottom: 0px;
+    border-radius: 10px;
+    }
+.box2{
+/*	margin-right: 900px;
+    margin-left: 100px;
+    margin-bottom: 30px;*/
+    background-color: white;
+    padding-bottom: 0px;
+    border-radius: 10px;
+
+    }
+.box3{
+	/*margin-right: 900px;
+    margin-left: 100px;
+    margin-bottom: 30px;*/
+    background-color: white;
+    padding-bottom: 0px;
+    border-radius: 10px;
+
+    }
+.list{
+    text-align: center;
+
+}
+a{
+    text-decoration: none;
+    text-decoration-color: black;
+    text-decoration-line: none;
+  }
+
+</style>
+<title>COBI 메인화면</title>
+
+<nav>
+   <h1> <span> COBI </span> </h1>
+
+<hr/>
+</nav>
+
+</head>
+
+<body>
+
+
+<div class="mainbox">
+
+    <div class="box1">
+        <img src="./images/community.png" height="200" width="205">
+
+        <div class="list">
+        <p><a href=walam-html/coming.html>병원 찾기</a></p>
+        <hr/>
+        <p><a href=walam-html/coming.html> 약국찾기</a></p>
+        <hr/>
+
+        <p><a href=walam-html/coming.html>의약품정보조회 </a></p>
+
+        </div>
+    </div>
+
+    <div class="box2">
+    <img src="./images/medic.png" height="200" width="210">
+    <div class="list">
+        <p><a href="/self/">자가진단</a></p>
+        <hr/>
+        <p><a href=walam-html/coming.html>비대면진료 </a></p>
+        <hr/>
+        <p><a href=walam-html/coming.html>내건강기록 </a></p>
+
+        </div>
+    </div>
+
+    <div class="box3">
+    <img src="./images/search.png" height="200" width="220">
+    <div class="list">
+
+        <p><a href="/blog/"> 의학 뉴스 </a></p>
+        <hr/>
+        <p><a href="/qqq/"> Q&A </a></p>
+
+
+        <hr/>
+        </div>
+    </div>
+
+</div>
+
+</body>
+</html>

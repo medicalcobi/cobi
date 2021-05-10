@@ -1,10 +1,10 @@
 from django.shortcuts import render
 
 # Create your views here.
-def index(request):
+def landing(request):
     return render(
         request,
-        'single_pages/index.html'
+        'single_pages/landing.html'
     )
 
 def qqq(request):

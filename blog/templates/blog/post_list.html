@@ -1,19 +1,239 @@
-<!DOCTYPE html>
+<!doctype html>
+{% load static %}
 <html lang="ko">
-<head>
-    <meta charset="UTF-8">
-    <title>blog</title>
-</head>
-<body>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="Mark Otto, Jacob Thornton, and Bootstrap contributors">
+    <meta name="generator" content="Hugo 0.82.0">
 
- <h1>cobi</h1>
+    <title>COBI Medical Journal</title>
 
-{% for p in posts %}
-   <hr/>
-   <h2><a href="{{ p.get_absolute_url }}">{{ p.title }}</a></h2>
-   <h4>{{ p.created_at }}</h4>
-   <p>{{ p.content }}</p>
-{% endfor %}
+    <link rel="stylesheet" href="{% static 'blog/bootstrap/bootstrap.min.css' %}" media="screen">
 
-</body>
+    <!-- Bootstrap core CSS -->
+<link href="{% static 'blog/bootstrap/bootstrap.min.css' %}" rel="stylesheet">
+
+    <style>
+      .bd-placeholder-img {
+        font-size: 1.125rem;
+        text-anchor: middle;
+        -webkit-user-select: none;
+        -moz-user-select: none;
+        user-select: none;
+      }
+
+      @media (min-width: 768px) {
+        .bd-placeholder-img-lg {
+          font-size: 3.5rem;
+        }
+      }
+    </style>
+
+
+    <!-- Custom styles for this template -->
+    <link href="https://fonts.googleapis.com/css?family=Playfair&#43;Display:700,900&amp;display=swap" rel="stylesheet">
+    <!-- Custom styles for this template -->
+    <link href="{% static 'blog/bootstrap/blog.css' %}" rel="stylesheet">
+  </head>
+  <body>
+
+  <nav>
+<div class="container">
+  <header class="blog-header py-3">
+    <div class="row flex-nowrap justify-content-between align-items-center">
+      <div class="col-4 pt-1">
+        <a class="link-secondary" href="#">맞춤형 정보 구독 안내</a>
+      </div>
+      <div class="col-4 text-center">
+        <a class="blog-header-logo text-dark" href="/">COBI Medical Journal</a>
+      </div>
+      <div class="col-4 d-flex justify-content-end align-items-center">
+        <a class="link-secondary" href="#" aria-label="Search">
+          <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="mx-3" role="img" viewBox="0 0 24 24"><title>Search</title><circle cx="10.5" cy="10.5" r="7.5"/><path d="M21 21l-5.2-5.2"/></svg>
+        </a>
+        <a class="btn btn-sm btn-outline-secondary" href="#">회원가입 | 로그인</a>
+      </div>
+    </div>
+  </header>
+
+  <div class="nav-scroller py-1 mb-2">
+    <nav class="nav d-flex justify-content-between">
+      <a class="p-2 link-secondary" href="#">전체</a>
+      <a class="p-2 link-secondary" href="#">코로나19</a>
+      <a class="p-2 link-secondary" href="#">유행·감염병</a>
+      <a class="p-2 link-secondary" href="#">의료정책</a>
+      <a class="p-2 link-secondary" href="#">병원·개원가</a>
+      <a class="p-2 link-secondary" href="#">학회·학술</a>
+      <a class="p-2 link-secondary" href="#">제약·의료기기</a>
+      <a class="p-2 link-secondary" href="#">장애·재활정보</a>
+      <a class="p-2 link-secondary" href="#">심뇌혈관질환·암</a>
+      <a class="p-2 link-secondary" href="#">응급상황 정보</a>
+      <a class="p-2 link-secondary" href="#">간단건강뉴스</a>
+      <a class="p-2 link-secondary" href="#">세미나 안내</a>
+    </nav>
+  </div>
+</div>
+  </nav>
+
+<main class="container">
+  <div class="p-4 p-md-5 mb-4 text-white rounded bg-dark">
+    <div class="col-md-6 px-0">
+      <h1 class="display-4 fst-italic">혈전 발생 논란속 '1회 접종' 얀센 백신은 안전할까?</h1>
+      <p class="lead my-3">|모더나·화이자 백신, 1회 접종 예방률 80% 기록<br>|전문가들 "면역 지속성·보관 용이성 등 따져야"</p>
+      <p class="lead mb-0"><a href="#" class="text-white fw-bold">자세한 내용 보기</a></p>
+    </div>
+  </div>
+
+  <div class="row mb-2">
+    <div class="col-md-6">
+      <div class="row g-0 border rounded overflow-hidden flex-md-row mb-4 shadow-sm h-md-250 position-relative">
+        <div class="col p-4 d-flex flex-column position-static">
+          <strong class="d-inline-block mb-2 text-primary">전체</strong>
+          <h3 class="mb-0">{{ p.title }}</h3>
+          <div class="mb-1 text-muted">{{ p.created_at }}</div>
+          <p class="card-text mb-auto">{{ p.content }}</p>
+          <a href="{{ p.get_absolute_url }}" class="stretched-link">자세한 내용 보기</a>
+        </div>
+        <div class="col-auto d-none d-lg-block">
+          <img class="bd-placeholder-img" width="200" height="250" src="{{ p.head_image.url }}"></svg>
+
+        </div>
+      </div>
+    </div>
+    <div class="col-md-6">
+      <div class="row g-0 border rounded overflow-hidden flex-md-row mb-4 shadow-sm h-md-250 position-relative">
+        <div class="col p-4 d-flex flex-column position-static">
+          <strong class="d-inline-block mb-2 text-success">의료정책</strong>
+          <h3 class="mb-0"><a href="{{ p.get_absolute_url }}">{{ p.title }}</a> </h3>
+          <div class="mb-1 text-muted">{{ p.created }}</div>
+          <p class="mb-auto">{{ p.content }}</p>
+          <a href="/blog/11/" class="stretched-link">자세한 내용 보기</a>
+        </div>
+        <div class="col-auto d-none d-lg-block">
+          <img class="bd-placeholder-img" width="200" height="250" src="{{ p.head_image.url }}"></svg>
+
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="row mb-2">
+    <div class="col-md-6">
+      <div class="row g-0 border rounded overflow-hidden flex-md-row mb-4 shadow-sm h-md-250 position-relative">
+        <div class="col p-4 d-flex flex-column position-static">
+          <strong class="d-inline-block mb-2 text-success">병원·개원가</strong>
+          <h3 class="mb-0">"치매관리법 개정 막자" 의료계 대국민 여론전 총공세</h3>
+          <div class="mb-1 text-muted">2021-04-09 15:45</div>
+          <p class="card-text mb-auto">신경과의사회, 1만장 탄원서 제출 이은 대국민 설문
+            <br>의료진들 제도 문제점 지적 "전문가 의견 지속 전달"</p>
+          <a href="#" class="stretched-link">자세한 내용 보기</a>
+        </div>
+        <div class="col-auto d-none d-lg-block">
+          <img class="bd-placeholder-img" width="200" height="250" src="{{ p.head_image.url }}"></svg>
+
+        </div>
+      </div>
+    </div>
+    <div class="col-md-6">
+      <div class="row g-0 border rounded overflow-hidden flex-md-row mb-4 shadow-sm h-md-250 position-relative">
+        <div class="col p-4 d-flex flex-column position-static">
+          <strong class="d-inline-block mb-2 text-primary">학회·학술</strong>
+          <h3 class="mb-0">효용성 무너진 위암 내시경 추적 관찰…지침 바뀔까</h3>
+          <div class="mb-1 text-muted">2021-04-07 05:45</div>
+          <p class="mb-auto">848명 5년 추적 관찰 결과 내시경 검사 근거 떨어져 <br>림프절 재발 등 CT에만 관찰…"선택 사항으로 남겨야"</p>
+          <a href="#" class="stretched-link">자세한 내용 보기</a>
+        </div>
+        <div class="col-auto d-none d-lg-block">
+          <img class="bd-placeholder-img" width="200" height="250" src="{{ p.head_image.url }}"></svg>
+
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="row mb-2">
+    <div class="col-md-6">
+      <div class="row g-0 border rounded overflow-hidden flex-md-row mb-4 shadow-sm h-md-250 position-relative">
+        <div class="col p-4 d-flex flex-column position-static">
+          <strong class="d-inline-block mb-2 text-primary">제약·의료기기</strong>
+          <h3 class="mb-0">EMA, AZ 백신 혈전 부작용 입장 재확인 "이익 상회"</h3>
+          <div class="mb-1 text-muted">2021-04-08 12:02</div>
+          <p class="card-text mb-auto">안전위원회, 86건의 보고 사례 검토 후 결론
+            <br>"상관성 있어도 백신 접종 이점, 위험보다 커"</p>
+          <a href="#" class="stretched-link">자세한 내용 보기</a>
+        </div>
+        <div class="col-auto d-none d-lg-block">
+          <img class="bd-placeholder-img" width="200" height="250" src="{{ p.head_image.url }}"></svg>
+
+        </div>
+      </div>
+    </div>
+    <div class="col-md-6">
+      <div class="row g-0 border rounded overflow-hidden flex-md-row mb-4 shadow-sm h-md-250 position-relative">
+        <div class="col p-4 d-flex flex-column position-static">
+          <div class="p-4 mb-3 bg-light rounded">
+            <h4 class="fst-italic">맞춤형 정보 구독 안내</h4>
+            <p class="mb-0">관심 분야의 의학 소식을 카카오톡, 이메일 등 자주 사용하는 SNS에서 받아보세요. 매일 올라오는 다양하고 질 높은 소식을 본인의 관심사에 맞춰 빠르게 접할 수 있습니다.</p>
+            <a class="link-secondary" href="#">맞춤형 정보 구독 신청 바로가기 (무료)</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="row mb-2">
+    <div class="col-md-6">
+      <div class="row g-0 border rounded overflow-hidden flex-md-row mb-4 shadow-sm h-md-250 position-relative">
+        <div class="col p-4 d-flex flex-column position-static">
+          <strong class="d-inline-block mb-2 text-success">의료정책</strong>
+          <h3 class="mb-0">비급여 보고 잘하면 돈주겠다는 복지부…개원가는 싸늘</h3>
+          <div class="mb-1 text-muted">2021-04-10 05:45</div>
+          <p class="card-text mb-auto">정부, 비급여 보고 구체화 전제로 재정 지원 검토
+            <br>실비보상·수가협상 특전 등 보상안 제시</p>
+          <a href="#" class="stretched-link">자세한 내용 보기</a>
+        </div>
+        <div class="col-auto d-none d-lg-block">
+          <img class="bd-placeholder-img" width="200" height="250" src="{{ p.head_image.url }}"></svg>
+
+        </div>
+      </div>
+    </div>
+    <div class="col-md-6">
+      <div class="row g-0 border rounded overflow-hidden flex-md-row mb-4 shadow-sm h-md-250 position-relative">
+        <div class="col p-4 d-flex flex-column position-static">
+          <strong class="d-inline-block mb-2 text-primary">병원·개원가</strong>
+          <h3 class="mb-0">정부, 유증상자 진단 지연에 "신고없이 적극 권고"</h3>
+          <div class="mb-1 text-muted">2021-04-08 11:00</div>
+          <p class="mb-auto">중대본, 코로나 집단발생 전 의료기관 내원 다수 확인<br>검사의뢰서 등 서식 간소화 "전국 보건소 검사 가능"</p>
+          <a href="#" class="stretched-link">자세한 내용 보기</a>
+        </div>
+        <div class="col-auto d-none d-lg-block">
+          <img class="bd-placeholder-img" width="200" height="250" src="{{ p.head_image.url }}"></svg>
+
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+  <nav class="blog-pagination" aria-label="Pagination">
+    <a class="btn btn-outline-primary" href="#">이전 페이지</a>
+    <a class="btn btn-outline-secondary disabled" href="#" tabindex="-1" aria-disabled="true">다음 페이지</a>
+  </nav>
+
+
+
+</main><!-- /.container -->
+
+<footer class="blog-footer">
+  <p>COBI Medical Journal Technical Assistance <a href="https://twitter.com/mdo">mdo</a>.</p>
+    <a href="#">맨 위로 가기</a>
+  </p>
+</footer>
+
+
+
+  </body>
 </html>
