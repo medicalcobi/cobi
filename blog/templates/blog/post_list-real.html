@@ -1,0 +1,262 @@
+<!doctype html>
+{% load static %}
+<html lang="ko">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="Mark Otto, Jacob Thornton, and Bootstrap contributors">
+    <meta name="generator" content="Hugo 0.82.0">
+
+    <title>COBI Medical Journal</title>
+
+    <link rel="stylesheet" href="{% static 'blog/bootstrap/bootstrap.min.css' %}" media="screen">
+
+    <!-- Bootstrap core CSS -->
+<link href="{% static 'blog/bootstrap/bootstrap.min.css' %}" rel="stylesheet">
+
+    <style>
+      .bd-placeholder-img {
+        font-size: 1.125rem;
+        text-anchor: middle;
+        -webkit-user-select: none;
+        -moz-user-select: none;
+        user-select: none;
+      }
+
+      @media (min-width: 768px) {
+        .bd-placeholder-img-lg {
+          font-size: 3.5rem;
+        }
+      }
+
+      .mainbox{
+        display: flex;
+        justify-content: space-evenly;
+      }
+      .left{
+      margin-left: 5px;
+      }
+      .right{
+      margin-right: 5px;
+      }
+    </style>
+
+
+    <!-- Custom styles for this template -->
+    <link href="https://fonts.googleapis.com/css?family=Playfair&#43;Display:700,900&amp;display=swap" rel="stylesheet">
+    <!-- Custom styles for this template -->
+    <link href="{% static 'blog/bootstrap/blog.css' %}" rel="stylesheet">
+  </head>
+  <body>
+
+  <nav>
+<div class="container">
+  <header class="blog-header py-3">
+    <div class="row flex-nowrap justify-content-between align-items-center">
+      <div class="col-4 pt-1">
+        <a class="link-secondary" href="#">맞춤형 정보 구독 안내</a>
+      </div>
+      <div class="col-4 text-center">
+        <a class="blog-header-logo text-dark" href="/">COBI Medical Journal</a>
+      </div>
+      <div class="col-4 d-flex justify-content-end align-items-center">
+        <a class="link-secondary" href="#" aria-label="Search">
+          <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="mx-3" role="img" viewBox="0 0 24 24"><title>Search</title><circle cx="10.5" cy="10.5" r="7.5"/><path d="M21 21l-5.2-5.2"/></svg>
+        </a>
+        <a class="btn btn-sm btn-outline-secondary" href="#">회원가입 | 로그인</a>
+      </div>
+    </div>
+  </header>
+
+  <div class="nav-scroller py-1 mb-2">
+    <nav class="nav d-flex justify-content-between">
+      <a class="p-2 link-secondary" href="#">전체</a>
+      <a class="p-2 link-secondary" href="#">코로나19</a>
+      <a class="p-2 link-secondary" href="#">유행·감염병</a>
+      <a class="p-2 link-secondary" href="#">의료정책</a>
+      <a class="p-2 link-secondary" href="#">병원·개원가</a>
+      <a class="p-2 link-secondary" href="#">학회·학술</a>
+      <a class="p-2 link-secondary" href="#">제약·의료기기</a>
+      <a class="p-2 link-secondary" href="#">장애·재활정보</a>
+      <a class="p-2 link-secondary" href="#">심뇌혈관질환·암</a>
+      <a class="p-2 link-secondary" href="#">응급상황 정보</a>
+      <a class="p-2 link-secondary" href="#">간단건강뉴스</a>
+      <a class="p-2 link-secondary" href="#">세미나 안내</a>
+    </nav>
+  </div>
+</div>
+  </nav>
+
+<main class="container">
+  <div class="p-4 p-md-5 mb-4 text-white rounded bg-dark">
+    <div class="col-md-6 px-0">
+      <h1 class="display-4 fst-italic">혈전 발생 논란속 '1회 접종' 얀센 백신은 안전할까?</h1>
+      <p class="lead my-3">|모더나·화이자 백신, 1회 접종 예방률 80% 기록<br>|전문가들 "면역 지속성·보관 용이성 등 따져야"</p>
+      <p class="lead mb-0"><a href="#" class="text-white fw-bold">자세한 내용 보기</a></p>
+    </div>
+  </div>
+
+ <div class="mainbox">
+   <div class="right">
+  <div class="card mb-3" style="width: 550px; height: 250px;">
+    <div class="row g-0">
+      <div class="col-md-4">
+        <img class="card-img-top" src="{{ p.head_image.url }}" alt="...">
+      </div>
+      <div class="col-md-8">
+        <div class="card-body">
+          <h5 class="card-title">{{ p.title }}</h5>
+          <p class="card-text">{{ p.content }}</p>
+          <p class="card-text"><small class="text-muted">{{ p.created_at }}</small></p>
+          <a class="btn btn-primary" href="{{ p.get_absolute_url }}" role="button">자세히 보기</a>
+        </div>
+      </div>
+    </div>
+  </div>
+   </div>
+
+  <div class="left">
+   <div class="card mb-3" style="width: 550px; height: 250px;">
+    <div class="row g-0">
+      <div class="col-md-4">
+        <img src="{{ p.head_image.url }}" alt="...">
+      </div>
+      <div class="col-md-8">
+        <div class="card-body">
+          <h5 class="card-title">코로나 유행</h5>
+          <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+          <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
+          <a class="btn btn-primary" href="{{ p.get_absolute_url }}" role="button">자세히 보기</a>
+        </div>
+      </div>
+    </div>
+  </div>
+  </div>
+</div>
+
+<div class="mainbox">
+
+  <div class="card mb-3" style="width: 630px; height: 250px;">
+    <div class="row g-0">
+      <div class="col-md-4">
+        <img src="{{ p.head_image.url }}" alt="...">
+      </div>
+      <div class="col-md-8">
+        <div class="card-body">
+          <h5 class="card-title">코로나 유행</h5>
+          <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+          <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
+          <a class="btn btn-primary" href="{{ p.get_absolute_url }}" role="button">자세히 보기</a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+    <div class="card mb-3" style="width: 630px; height: 250px;">
+    <div class="row g-0">
+      <div class="col-md-4">
+        <img src="{{ p.head_image.url }}" alt="...">
+      </div>
+      <div class="col-md-8">
+        <div class="card-body">
+          <h5 class="card-title">코로나 유행</h5>
+          <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+          <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
+          <a class="btn btn-primary" href="{{ p.get_absolute_url }}" role="button">자세히 보기</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="mainbox">
+
+  <div class="card mb-3" style="width: 630px; height: 250px;">
+    <div class="row g-0">
+      <div class="col-md-4">
+        <img src="{{ p.head_image.url }}" alt="...">
+      </div>
+      <div class="col-md-8">
+        <div class="card-body">
+          <h5 class="card-title">코로나 유행</h5>
+          <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+          <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
+          <a class="btn btn-primary" href="{{ p.get_absolute_url }}" role="button">자세히 보기</a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="card mb-3" style="width: 630px; height: 250px;">
+    <div class="row g-0">
+      <div class="col-md-4">
+        <img src="{{ p.head_image.url }}" alt="...">
+      </div>
+      <div class="col-md-8">
+        <div class="card-body">
+          <h5 class="card-title">코로나 유행</h5>
+          <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+          <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
+          <a class="btn btn-primary" href="{{ p.get_absolute_url }}" role="button">자세히 보기</a>
+        </div>
+      </div>
+    </div>
+    </div>
+</div>
+
+<div class="mainbox">
+
+  <div class="card mb-3" style="width: 630px; height: 250px;">
+    <div class="row g-0">
+      <div class="col-md-4">
+        <img src="{{ p.head_image.url }}" alt="...">
+      </div>
+      <div class="col-md-8">
+        <div class="card-body">
+          <h5 class="card-title">코로나 유행</h5>
+          <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+          <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
+          <a class="btn btn-primary" href="{{ p.get_absolute_url }}" role="button">자세히 보기</a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="card mb-3" style="width: 630px; height: 250px;">
+    <div class="row g-0">
+      <div class="col-md-4">
+        <img src="{{ p.head_image.url }}" alt="...">
+      </div>
+      <div class="col-md-8">
+        <div class="card-body">
+          <h5 class="card-title">코로나 유행</h5>
+          <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+          <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
+          <a class="btn btn-primary" href="{{ p.get_absolute_url }}" role="button">자세히 보기</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+  <nav class="blog-pagination" aria-label="Pagination">
+    <a class="btn btn-outline-primary" href="#">이전 페이지</a>
+    <a class="btn btn-outline-secondary disabled" href="{{ p.get_absolute_url }}" tabindex="-1" aria-disabled="true">다음 페이지</a>
+  </nav>
+
+
+
+</main><!-- /.container -->
+
+<footer class="blog-footer">
+  <p>COBI Medical Journal Technical Assistance <a href="https://twitter.com/mdo">mdo</a>.</p>
+    <a href="#">맨 위로 가기</a>
+  </p>
+</footer>
+
+
+
+  </body>
+</html>
