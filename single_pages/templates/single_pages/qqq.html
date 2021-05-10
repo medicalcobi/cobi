@@ -8,8 +8,6 @@
 <style>
  *{padding:0%; margin:0%;}
 
-    .nav{background-color: rgb(20, 20, 100); color: white;
-    padding: 20px;}
 
     li{list-style-type: none;}
 
@@ -36,8 +34,7 @@
 
     .list-group{margin: 60px;}
 
-    footer{background-color: rgb(66, 67, 73);
-    padding: 50px;}
+
 
 
 
@@ -49,16 +46,12 @@
 </head>
 
 <body>
-    <nav class="nav">
-        <a href="/">cobi</a>
-
-    </nav>
-
+        {% include 'blog/navbar.html' %}
 
     <div class="search">
       <!-- As a link -->
      <nav class="navbar navbar-light bg-light">
-     <a class="navbar-brand" href="#">Q&A</a>
+     <a class="navbar-brand" href="{% static 'blog/bootstrap/bootstrap.min.css' %}">Q&A</a>
 
         <form class="form-inline my-2 my-lg-0">
             <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search" aria-colspan="500">
@@ -87,7 +80,7 @@
         <ul>
             <li>
                 <div class="list-group">
-                    <a href="#" class="list-group-item list-group-item-action active" aria-current="true">
+                    <a href="{% static 'blog/bootstrap/bootstrap.min.css' %}" class="list-group-item list-group-item-action active" aria-current="true">
                     Q&A 카테고리
                     </a>
                     <a href="#" class="list-group-item list-group-item-action">코로나 19 관련</a>
@@ -219,9 +212,7 @@
 
     </div>
 
-    <footer>
-        푸
-    </footer>
+   {% include 'blog/footer.html' %}
 
 
 </body>

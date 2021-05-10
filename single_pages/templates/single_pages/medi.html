@@ -1,5 +1,5 @@
+
 <!DOCTYPE html>
-{% load static %}
 <html>
 
 <head>
@@ -61,7 +61,7 @@ a{
 
 </style>
 <title>COBI 메인화면</title>
-
+    {% load static %}
 <nav>
    <h1> <span> COBI </span> </h1>
 
@@ -76,38 +76,37 @@ a{
 <div class="mainbox">
 
     <div class="box1">
-        <img src="./images/community.png" height="200" width="205">
-
+        <img src="{% static 'single_pages/images/medic.png' %}" height="200" width="205">
         <div class="list">
-        <p><a href=walam-html/coming.html>병원 찾기</a></p>
+        <p>  <a href=walam-html/coming.html>병원 찾기</a></p>
         <hr/>
-        <p><a href=walam-html/coming.html> 약국찾기</a></p>
+        <p>  <a href=walam-html/coming.html> 약국찾기</a></p>
         <hr/>
 
-        <p><a href=walam-html/coming.html>의약품정보조회 </a></p>
+        <p> <a href=walam-html/coming.html>의약품정보조회 </a></p>
 
         </div>
     </div>
 
     <div class="box2">
-    <img src="./images/medic.png" height="200" width="210">
+    <img src="{% static 'single_pages/images/search.png' %}" height="200" width="210">
     <div class="list">
-        <p><a href="/self/">자가진단</a></p>
+        <p>   <a href="/self/">자가진단</a></p>
         <hr/>
-        <p><a href=walam-html/coming.html>비대면진료 </a></p>
+        <p>   <a href=walam-html/coming.html>비대면진료 </a></p>
         <hr/>
-        <p><a href=walam-html/coming.html>내건강기록 </a></p>
+        <p>  <a href=walam-html/coming.html>내건강기록 </a></p>
 
         </div>
     </div>
 
     <div class="box3">
-    <img src="./images/search.png" height="200" width="220">
+    <img src="{% static 'single_pages/images/community.png' %}" height="200" width="220">
     <div class="list">
 
-        <p><a href="/blog/"> 의학 뉴스 </a></p>
+        <p>  <a href="/blog/"> 의학 뉴스 </a></p>
         <hr/>
-        <p><a href="/qqq/"> Q&A </a></p>
+        <p> <a href="/qqq/"> Q&A </a></p>
 
 
         <hr/>
@@ -115,6 +114,5 @@ a{
     </div>
 
 </div>
-
 </body>
 </html>

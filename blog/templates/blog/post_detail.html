@@ -3,18 +3,27 @@
 <head>
     <meta charset="UTF-8">
     <title>{{ post.title }} - Blog</title>
+
+<style>
+    .news{ margin-left: 340px;
+    margin-top: 20px;}
+</style>
 </head>
 <body>
 
 <nav>
-    <a href="/blog/">뉴스</a>
+    {% include 'blog/navbar.html' %}
 </nav>
 
+<div class="news">
 <h1>{{ post.title }}</h1>
 <h4>{{ post.created_at }}</h4>
 <p>{{ post.content }}</p>
 <hr/>
 
 <h3>여기 댓글이 들어올 수 있겠죠?</h3>
+</div>
 </body>
 </html>
+
+{% include 'blog/footer.html' %}
