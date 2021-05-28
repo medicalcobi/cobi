@@ -1,118 +1,542 @@
-
-<!DOCTYPE html>
-<html>
+<!DOCTYPE HTML>
+{% load static %}
 
 <head>
-<meta charset='utf-8'>
-<style>
-body{
-		background-color:#002850;
-		width: 1180px;
-		margin: auto;
-	}
+	<meta charset="UTF-8">
+	<title>Medirev</title>
 
-span{ color: white;
-    text-align : center;
-    font-size: xx-large;
-    }
-
-.mainbox{
-    display: flex;
-    justify-content: space-evenly;
-   /* flex-direction: column;
-    align-items: center;*/
-    padding-top: 100px;
-}
-.box1{
-/*	margin-right: 900px;
-    margin-left: 100px;
-    margin-bottom: 30px;*/
-    background-color: white;
-    padding-bottom: 0px;
-    border-radius: 10px;
-    }
-.box2{
-/*	margin-right: 900px;
-    margin-left: 100px;
-    margin-bottom: 30px;*/
-    background-color: white;
-    padding-bottom: 0px;
-    border-radius: 10px;
-
-    }
-.box3{
-	/*margin-right: 900px;
-    margin-left: 100px;
-    margin-bottom: 30px;*/
-    background-color: white;
-    padding-bottom: 0px;
-    border-radius: 10px;
-
-    }
-.list{
-    text-align: center;
-
-}
-a{
-    text-decoration: none;
-    text-decoration-color: black;
-    text-decoration-line: none;
-  }
-
-</style>
-<title>COBI 메인화면</title>
-    {% load static %}
-<nav>
-   <h1> <span> COBI </span> </h1>
-
-<hr/>
-</nav>
-
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+	<link rel="icon" href="favicon.png" type="image/png">
+	<!-- Include Bootstrap CSS -->
+	<link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" rel="stylesheet">
+	<!-- Include Font Awesome CSS -->
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
+	<!-- Include Font Awesome CSS -->
+	<link href='https://fonts.googleapis.com/css?family=Oswald:400,700|Open+Sans:400,300,600,700,800' rel='stylesheet' type='text/css'>
+	<!-- Include Medirev CSS -->
+	<link href="{% static 'blog/bootstrap/style.css' %}" rel='stylesheet' type='text/css'>
+	<!-- SLIDER REVOLUTION 4.x CSS SETTINGS -->
+	<link rel="stylesheet" type="text/css" href="{% static 'blog/bootstrap/settings.css' %}" media="screen" />
 </head>
 
 <body>
+	<header class="header">
+		<div class="container">
+			<div class="container-fluid">
+				<div class="header-top">
+					<div class="col-md-3 col-sm-4 hidden-xs logo">
+						<a href=""><img src="{% static 'single_pages/images/logo.png' %}" width="170" height="90" alt="" /></a>
+					</div>
+					<div class="col-md-offset-3 col-md-6 col-sm-8 col-xs-12 contact-info">
+						<div class="contact-number col-md-6 col-sm-6 col-xs-6">
+							<i class="fa fa-phone"></i>
+							<ul>
+								<li>+ 2019 0558 0554</li>
+								<li>+ 2019 0593 2021</li>
+							</ul>
+						</div>
+						<div class="contact-online col-md-6 col-sm-6 col-xs-6">
+							<i class="fa fa-globe"></i>
+							<ul>
+								<li>cobi@vision.hoseo.edu</li>
+								<li>http://127.0.0.1:8000/blog/</li>
+							</ul>
+						</div>
+					</div>
+				</div>
+			</div>
+			<nav class="navbar navbar-default">
+			  <div class="container-fluid">
+				<!-- Brand and toggle get grouped for better mobile display -->
+				<div class="navbar-header">
+				  <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navigation" aria-expanded="false">
+					<span class="sr-only">Toggle navigation</span>
+					<span class="icon-bar"></span>
+					<span class="icon-bar"></span>
+					<span class="icon-bar"></span>
+				  </button>
+				  <a href="" class="navbar-header"><img src="img/logo.png" alt="" /></a>
+				</div>
 
+				<!-- Collect the nav links, forms, and other content for toggling -->
+				<div class="collapse navbar-collapse" id="navigation">
+				  <ul class="nav navbar-nav">
+					<li class="active"><a href="">Home <span class="sr-only">(current)</span></a></li>
+					<li><a href="#">병원·약국찾기</a></li>
+					<li><a href="#">자가진단</a></li>
+					<li><a href="#">Q&A</a></li>
+					<li><a href="#">의학뉴스</a></li>
+					<li><a href="#">의약품조회</a></li>
+				  </ul>
+				  <ul class="nav navbar-nav navbar-right">
+					<li class="get-a-quote"><a href="#">내건강기록</a></li>
+				  </ul>
+				</div><!-- /.navbar-collapse -->
+			  </div><!-- /.container-fluid -->
+			</nav>
+		</div>
+	</header>
+	<!--
+	#################################
+		- THEMEPUNCH BANNER -
+	#################################
+	-->
+	<div class="slider-container">
+		<div class="slider" >
+			<ul>	<!-- SLIDE  -->
+	<li data-transition="fade" data-slotamount="5" data-masterspeed="500" data-thumb="homeslider_thumb1.jpg"  data-saveperformance="on"  data-title="Intro Slide">
+		<!-- MAIN IMAGE -->
+		<img src="img/dummy.png"  alt="slidebg1" data-lazyload="img/slider-bg.png" data-bgposition="center top" data-bgfit="cover" data-bgrepeat="no-repeat">
+		<!-- LAYERS -->
 
-<div class="mainbox">
+		<!-- LAYER NR. 1 -->
+		<div class="tp-caption"
+			data-x="-20"
+			data-y="70"
+			data-customout="x:0;y:0;z:0;rotationX:0;rotationY:0;rotationZ:0;scaleX:0.75;scaleY:0.75;skewX:0;skewY:0;opacity:0;transformPerspective:600;transformOrigin:50% 50%;"
+			data-speed="700"
+			data-start="910"
+			data-easing="Power3.easeInOut"
+			data-elementdelay="0.1"
+			data-endelementdelay="0.1"
+			style="z-index: 2;"><img src="img/dummy.png" alt="" data-lazyload="img/doctor.png">
+		</div>
+		<!-- LAYER NR. 2 -->
+		<div class="tp-caption hdcptn"
+			data-x="310"
+			data-y="220"
+			data-customout="x:0;y:0;z:0;rotationX:0;rotationY:0;rotationZ:0;scaleX:0.75;scaleY:0.75;skewX:0;skewY:0;opacity:0;transformPerspective:600;transformOrigin:50% 50%;"
+			data-speed="500"
+			data-start="1110"
+			data-easing="Power3.easeInOut"
+			data-elementdelay="0.1"
+			data-endelementdelay="0.1"
+			style="z-index: 2;">집에서도 편하게 !<br/>내 건강은 내가 지킨다
+		</div>
+		<!-- LAYER NR. 3 -->
+		<div class="tp-caption dscptn"
+			data-x="310"
+			data-y="320"
+			data-customout="x:0;y:0;z:0;rotationX:0;rotationY:0;rotationZ:0;scaleX:0.75;scaleY:0.75;skewX:0;skewY:0;opacity:0;transformPerspective:600;transformOrigin:50% 50%;"
+			data-speed="500"
+			data-start="1110"
+			data-easing="Power3.easeInOut"
+			data-elementdelay="0.1"
+			data-endelementdelay="0.1"
+			style="z-index: 2;">코로나 19로 병원 가기가 걱정된다면, 작은 증상 하나에도 건강이 염려된다면<br> 자가진단 서비스와 의료진과의 1:1 Q&A로 집에서 간단하게 건강을 체크하세요.  <br>※자가진단서비스는 건강상태를 예측하는 서비스입니다. 정확한 건강 진단은<br> 의료진과의 상담이 필요합니다.
+		</div>
+		<!-- LAYER NR. 4 -->
+		<div class="tp-caption btnsrvc btn btn-default"
+			data-x="310"
+			data-y="420"
+			data-customout="x:0;y:0;z:0;rotationX:0;rotationY:0;rotationZ:0;scaleX:0.75;scaleY:0.75;skewX:0;skewY:0;opacity:0;transformPerspective:600;transformOrigin:50% 50%;"
+			data-speed="500"
+			data-start="1110"
+			data-easing="Power3.easeInOut"
+			data-elementdelay="0.1"
+			data-endelementdelay="0.1"
+			style="z-index: 2;"> <a href="">자세히 알아보기</a>
+		</div>
+		<!-- LAYER NR. 5 -->
+		<div class="tp-caption gtapntmnt-bg"
+			data-x="820"
+			data-y="80"
+			data-customout="x:0;y:0;z:0;rotationX:0;rotationY:0;rotationZ:0;scaleX:0.75;scaleY:0.75;skewX:0;skewY:0;opacity:0;transformPerspective:600;transformOrigin:50% 50%;"
+			data-speed="500"
+			data-start="1350"
+			data-easing="Power3.easeInOut"
+			data-elementdelay="0.1"
+			data-endelementdelay="0.1"
+			style="z-index: 2;"> <img src="img/get-appointment.png" alt="" />
+		</div>
+		<!-- LAYER NR. 6 -->
+		<div class="tp-caption oswaldhd text-center"
+			data-x="852"
+			data-y="132"
+			data-customout="x:0;y:0;z:0;rotationX:0;rotationY:0;rotationZ:0;scaleX:0.75;scaleY:0.75;skewX:0;skewY:0;opacity:0;transformPerspective:600;transformOrigin:50% 50%;"
+			data-speed="500"
+			data-start="1350"
+			data-easing="Power3.easeInOut"
+			data-elementdelay="0.1"
+			data-endelementdelay="0.1"
+			style="z-index: 2;"> 의사와 1:1상담을 원한다면? <br/> 온라인 비대면진료로 편하게!
+		</div>
+		<!-- LAYER NR. 7 -->
+		<div class="tp-caption btnappnt btn btn-default"
+			data-x="900"
+			data-y="230"
+			data-customout="x:0;y:0;z:0;rotationX:0;rotationY:0;rotationZ:0;scaleX:0.75;scaleY:0.75;skewX:0;skewY:0;opacity:0;transformPerspective:600;transformOrigin:50% 50%;"
+			data-speed="500"
+			data-start="1350"
+			data-easing="Power3.easeInOut"
+			data-elementdelay="0.1"
+			data-endelementdelay="0.1"
+			style="z-index: 2;"> <a href="">Q&A 작성 후 1:1 신청하기</a>
+		</div>
+		<!-- LAYER NR. 8 -->
+		<div class="tp-caption oswaldhd text-center"
+			data-x="925"
+			data-y="330"
+			data-customout="x:0;y:0;z:0;rotationX:0;rotationY:0;rotationZ:0;scaleX:0.75;scaleY:0.75;skewX:0;skewY:0;opacity:0;transformPerspective:600;transformOrigin:50% 50%;"
+			data-speed="500"
+			data-start="1350"
+			data-easing="Power3.easeInOut"
+			data-elementdelay="0.1"
+			data-endelementdelay="0.1"
+			style="z-index: 2;">진료 가능 시간
+		</div>
+		<!-- LAYER NR. 9 -->
+		<div class="tp-caption text-center apntmntdtls"
+			data-x="883"
+			data-y="372"
+			data-customout="x:0;y:0;z:0;rotationX:0;rotationY:0;rotationZ:0;scaleX:0.75;scaleY:0.75;skewX:0;skewY:0;opacity:0;transformPerspective:600;transformOrigin:50% 50%;"
+			data-speed="500"
+			data-start="1350"
+			data-easing="Power3.easeInOut"
+			data-elementdelay="0.1"
+			data-endelementdelay="0.1"
+			style="z-index: 2;"> Q&A상담은 24시간 언제나 가능합니다
+		</div>
+		<!-- LAYER NR. 10 -->
+		<div class="tp-caption apntmntdtls"
+			data-x="865"
+			data-y="400"
+			data-customout="x:0;y:0;z:0;rotationX:0;rotationY:0;rotationZ:0;scaleX:0.75;scaleY:0.75;skewX:0;skewY:0;opacity:0;transformPerspective:600;transformOrigin:50% 50%;"
+			data-speed="500"
+			data-start="1350"
+			data-easing="Power3.easeInOut"
+			data-elementdelay="0.1"
+			data-endelementdelay="0.1"
+			style="z-index: 2;">
+			 1 : 1진료 운영시간&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;07:00am - 12:00am<br/>
+		 	 고객센터 운영시간  &nbsp;&nbsp;&nbsp;&nbsp;09:00am - 06:00pm
+		</div>
+	</li>
+			</ul>
+			<div class="tp-bannertimer"></div>
+		</div>
+	</div>
+	<section class="welcome">
+		<div class="container">
+			<h2>Welcome To COBI</h2>
+			<p class="col-md-10 col-md-offset-1">코비는 국내 병원·약국 검색과 연계 병원의 의료진 프로필 열람이 가능합니다. 또한, 간단한 자가진단 서비스부터 의료진이 직접 답변해주는 Q&A 서비스를 제공합니다. 더 나아가 1:1 비대면 진료 서비스를 통하여 병원에 가지 않고도 의사와의 직접적인 상담이 가능합니다.  </p>
+			<div class="col-md-4 col-sm-4 single-service">
+				<i class="fa fa-ambulance"></i>
+				<h3 class="service-text">병원·약국 찾기</h2>
+			</div>
+			<div class="col-md-4 col-sm-4 single-service">
+				<i class="fa fa-stethoscope"></i>
+				<h3 class="service-text">자가진단하기</h2>
+			</div>
+			<div class="col-md-4 col-sm-4 single-service">
+				<i class="fa fa-calendar"></i>
+				<h3 class="service-text">의사와 상담하기</h2>
+			</div>
+		</div>
+	</section>
+	<section class="appointment-form">
+		<div class="container">
+			<div class="col-md-6">
+				<div class="get-quote">
+					<h2>Q&A 없이 1:1 진료 예약하기 <br></h2>
+					<p>시간적 여유가 부족하거나 빠르게 의사와의 상담 일정을 받고 싶으신 경우, 오른쪽의 신청서를 작성 후 제출해 주세요. 증상을 자세히 작성하시면 진료가 더욱 원활합니다.<br>작성하신 연락처로 예약 성공 문자가 발송되오니 연락처를 정확하게 기재해 주십시오. 진료를 원하시는 날짜와 시간에 가능한 의사가 없는 경우, 조율을 위한 연락을 드릴 수 있습니다. ※ 1:1 진료는 유료 서비스입니다. <br>고객센터 : 2019 0558 0554 , 2019 0593 2021</p>
+					<button class="btn btn-default">Q&A 먼저 진행 (무료)</button>
+				</div>
+			</div>
+			<div class="col-md-5 col-md-offset-1">
+				<div class="appointment-form">
+					<h3>1:1 진료 신청서</h3>
+					<form action="">
+						<input type="text" class="col-md-12 col-xs-12 appointment-name" name="name" placeholder="이름 (필수)"/>
+						<input type="text" class="col-md-12 col-xs-12 appointment-name" name="name" placeholder="전화번호 (필수)"/>
+						<input type="email" class="col-md-12 col-xs-12 appointment-email" name="email" placeholder="이메일 (필수)"/>
+						<select name="day" class="col-md-3 col-xs-3 appointment-day">
+							<option value="">날짜</option>
+							<option value="1">1</option>
+							<option value="2">2</option>
+							<option value="3">3</option>
+							<option value="4">4</option>
+							<option value="5">5</option>
+							<option value="6">6</option>
+							<option value="7">7</option>
+							<option value="8">8</option>
+							<option value="9">9</option>
+							<option value="10">10</option>
+							<option value="11">11</option>
+							<option value="12">12</option>
+							<option value="13">13</option>
+							<option value="14">14</option>
+							<option value="15">15</option>
+							<option value="16">16</option>
+							<option value="17">17</option>
+							<option value="18">18</option>
+							<option value="19">19</option>
+							<option value="20">20</option>
+							<option value="21">21</option>
+							<option value="22">22</option>
+							<option value="23">23</option>
+							<option value="24">24</option>
+							<option value="25">25</option>
+							<option value="26">26</option>
+							<option value="27">27</option>
+							<option value="28">28</option>
+							<option value="29">29</option>
+							<option value="30">30</option>
+							<option value="31">31</option>
 
-    <div class="box1">
-        <img src="{% static 'single_pages/images/medic.png' %}" height="200" width="205">
-        <div class="list">
-        <p>  <a href=walam-html/coming.html>병원 찾기</a></p>
-        <hr/>
-        <p>  <a href=walam-html/coming.html> 약국찾기</a></p>
-        <hr/>
+						</select>
+						<select name="time" class="col-md-3 col-xs-3 appointment-time">
+							<option value="">시간대</option>
+							<option value="7">오전 (7:00~12:00)</option>
+							<option value="12">오후 (12:00~18:00)</option>
+							<option value="18">야간 (18:00~00:00)</option>
+						</select>
+						<select name="doctor" class="col-md-5 col-xs-5 appointment-doctor">
+							<option value="">병원 위치</option>
+							<option value="Bappy">상관 없음</option>
+							<option value="Bappy">거주지 근처</option>
+							<option value="Bappy">기타 지역 지정</option>
 
-        <p> <a href=walam-html/coming.html>의약품정보조회 </a></p>
-
-        </div>
-    </div>
-
-    <div class="box2">
-    <img src="{% static 'single_pages/images/search.png' %}" height="200" width="210">
-    <div class="list">
-        <p>   <a href="/self/">자가진단</a></p>
-        <hr/>
-        <p>   <a href=walam-html/coming.html>비대면진료 </a></p>
-        <hr/>
-        <p>  <a href=walam-html/coming.html>내건강기록 </a></p>
-
-        </div>
-    </div>
-
-    <div class="box3">
-    <img src="{% static 'single_pages/images/community.png' %}" height="200" width="220">
-    <div class="list">
-
-        <p>  <a href="/blog/"> 의학 뉴스 </a></p>
-        <hr/>
-        <p> <a href="/qqq/"> Q&A </a></p>
-
-
-        <hr/>
-        </div>
-    </div>
-
-</div>
+						</select>
+						<textarea name="message" class="col-md-12 col-xs-12 appointment-message" placeholder="증상, 발현 기간, 복용 중인 약품 등을 최대한 자세히 작성해 주세요. " cols="16" rows="4"></textarea>
+						<button class="col-md-3 col-xs-4 col-md-offset-9 col-xs-offset-8 appointment-submit" name="submit">신청서 제출</button>
+					</form>
+				</div>
+			</div>
+		</div>
+	</section>
+	<section class="advantages">
+		<div class="container">
+			<div class="row">
+				<div class="advantage-row">
+					<h2>COBI Medical Information</h2>
+					<p class="col-md-10 col-md-offset-1">코비는 의료진을 통해 의학적인 검증을 마친 신뢰도 높은 정보를 선별하여 제공합니다.</p>
+					<div class="col-md-6 col-sm-6 col-xs-12">
+						<a href="" class="no-hover">
+							<div class="single-advantage" style="background-image:url('img/healthcare.jpg');">
+								<h3>의학 뉴스<br>COBI Medical Journal</h3>
+							</div>
+						</a>
+					</div>
+					<div class="col-md-6 col-sm-6 col-xs-12">
+						<a href="" class="no-hover">
+							<div class="single-advantage" style="background-image:url('img/medical-counseling.jpg');">
+								<h3>의약품 조회 서비스<br>Medication Inquiry Service
+								</h3>
+							</div>
+						</a>
+					</div>
+				</div>
+			</div>
+			<div class="clearfix"></div>
+			<br />
+			<div class="row">
+				<div class="meet-doctor">
+					<h2>Hall of Fame in April, 2021
+					</h2>
+					<p class="col-md-10 col-md-offset-1">2021년 4월 Q&A 및 1:1 상담에서 환자들이 가장 만족한 세 명의 의사를 소개합니다.</p>
+					<div class="col-md-4 col-sm-4 col-xs-12">
+						<div class="single-doctor">
+							<div class="doctor-image"><img src="img/doctor-1.jpg" alt="" /></div>
+							<div class="doctor-details">
+								<h4 class="name">인천칼국수병원 이유림</h4>
+								<p class="designation">Q&A 가장 많은 답변 수</p>
+								<div class="social">
+									<a href=""><i class="fa fa-facebook"></i></a>
+									<a href=""><i class="fa fa-twitter"></i></a>
+									<a href=""><i class="fa fa-envelope"></i></a>
+									<a href=""><i class="fa fa-phone"></i></a>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="col-md-4 col-sm-4 col-xs-12">
+						<div class="single-doctor">
+							<div class="doctor-image"><img src="img/doctor-2.jpg" alt="" /></div>
+							<div class="doctor-details">
+								<h4 class="name">천안호두병원 김서연</h4>
+								<p class="designation">Q&A 가장 높은 채택율</p>
+								<div class="social">
+									<a href=""><i class="fa fa-facebook"></i></a>
+									<a href=""><i class="fa fa-twitter"></i></a>
+									<a href=""><i class="fa fa-envelope"></i></a>
+									<a href=""><i class="fa fa-phone"></i></a>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="col-md-4 col-sm-4 col-xs-12">
+						<div class="single-doctor">
+							<div class="doctor-image"><img src="img/doctor-3.jpg" alt="" /></div>
+							<div class="doctor-details">
+								<h4 class="name">병점꿀떡병원 고윤아</h4>
+								<p class="designation">1:1진료 가장 높은 만족도</p>
+								<div class="social">
+									<a href=""><i class="fa fa-facebook"></i></a>
+									<a href=""><i class="fa fa-twitter"></i></a>
+									<a href=""><i class="fa fa-envelope"></i></a>
+									<a href=""><i class="fa fa-phone"></i></a>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
+	<section class="fun-facts" style="background-image:url('img/fun-facts-bg.jpg')">
+		<div class="container">
+			<div class="row">
+				<div class="col-md-2 col-md-offset-half col-sm-6 col-xs-12">
+					<div class="single-fun-fact">
+						<i class="fa fa-bed"></i>
+						<h3><span class="counter">630</span> 입원가능병원</h3>
+					</div>
+				</div>
+				<div class="col-md-2 col-md-offset-1 col-sm-6 col-xs-12">
+					<div class="single-fun-fact">
+						<i class="fa fa-user-md"></i>
+						<h3><span class="counter">113</span> 코비연계병원</h3>
+					</div>
+				</div>
+				<div class="col-md-2 col-md-offset-1 col-sm-6 col-xs-12">
+					<div class="single-fun-fact">
+						<i class="fa fa-ambulance"></i>
+						<h3><span class="counter">65</span> 호송가능병원</h3>
+					</div>
+				</div>
+				<div class="col-md-2 col-md-offset-1 col-sm-6 col-xs-12">
+					<div class="single-fun-fact">
+						<i class="fa fa-female"></i>
+						<h3><span class="counter">780</span> 의료진가입수</h3>
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
+	<section class="blog">
+		<div class="container">
+			<h2>From The COBI Medical Journal</h2>
+			<p class="col-md-10 col-md-offset-1 section-description">코비에서 제공하는 의학뉴스의 최신 목록입니다.</p>
+			<div class="blog-posts">
+				<div class="col-md-4 col-sm-4 col-xs-12">
+					<div class="single-post">
+						<img src="img/blog-post-1.jpg" alt="" />
+						<div class="post-date">2021-05-11</div>
+						<div class="post-details">
+							<p class="title">"코로나 접종, 중증 이상반응 인과성 없어도 지원"
+							</p>
+							<p class="description">|정은경 질병청장, 의료비 지원사업 한시적 신설키로
+								|근거자료 부족 이유로 보상 제외된 중증환자 보호 취지</p>
+							<a href="" class="more-link">더보기 +</a>
+						</div>
+					</div>
+				</div>
+				<div class="col-md-4 col-sm-4 col-xs-12">
+					<div class="single-post">
+						<img src="img/blog-post-2.jpg" alt="" />
+						<div class="post-date">2021-05-11</div>
+						<div class="post-details">
+							<p class="title">의료기기사들 '빅딜' 러시… 데이터 확보전 치열
+							</p>
+							<p class="description">|글로벌 의료기기사 인수전 활발…국내 기업도 살림 합쳐
+								|포트폴리오 다각화 통해 경쟁력 확보…스타트업도 '눈독'</p>
+							<a href="" class="more-link">더보기 +</a>
+						</div>
+					</div>
+				</div>
+				<div class="col-md-4 col-sm-4 col-xs-12">
+					<div class="single-post">
+						<img src="img/blog-post-3.jpg" alt="" />
+						<div class="post-date">2021-05-11</div>
+						<div class="post-details">
+							<p class="title">식약처 검증자문단, 모더나 코로나 백신 허가 권고
+							</p>
+							<p class="description">|18세 이상 2차 투여 14일 후 효과 확인
+								<br>|안전성 프로파일링 허용할 만한 수준<br>&nbsp;</p>
+							<a href="" class="more-link">더보기 +</a>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
+	<section class="footer">
+		<div class="widget">
+			<div class="container">
+				<div class="row">
+					<div class="col-md-3 col-md-offset-half col-sm-4 col-xs-12 single-widget">
+						<h2 class="widget-title">COBI 고객센터</h2>
+						<div class="widget-inner">
+							<p>경기도 천안시 제주동 송화마을 50</p>
+							<ul>
+								<li>월요일 - 금요일</li>
+								<li>9:00 - 18:00</li>
+								<li>토요일</li>
+								<li>9:00 - 15:00</li>
+								<li>일요일·공휴일</li>
+								<li>9:00 - 15:00</li>
+							</ul>
+						</div>
+					</div>
+					<div class="col-md-3 col-md-offset-1  col-sm-4 col-xs-12 single-widget">
+						<h2 class="widget-title">관련 사이트</h2>
+						<div class="widget-inner">
+							<ul class="footer-menu">
+								<li><a href="">코로나19</a></li>
+								<li><a href="">보건복지부</a></li>
+								<li><a href="">국민건강정보포털</a></li>
+								<li><a href="">공공보건포털</a></li>
+								<li><a href="">질병관리청</a></li>
+								<li><a href="">대한공공의학회지</a></li>
+								<li><a href="">건강보험심사평가원</a></li>
+								<li><a href="">한국보건사회연구원</a></li>
+							</ul>
+						</div>
+					</div>
+					<div class="col-md-3 col-md-offset-1  col-sm-4 col-xs-12 single-widget">
+						<h2 class="widget-title">이메일로 소식 받아보기</h2>
+						<div class="widget-inner">
+							<div class="input-group">
+							  <input type="text" class="form-control" placeholder="이메일 입력">
+							  <span class="input-group-btn">
+								<button class="btn btn-default" type="button"><i class="fa fa-paper-plane"></i></button>
+							  </span>
+							</div><!-- /input-group -->
+							<div class="clearfix"></div>
+							<div class="social footer">
+								<a href=""><i class="fa fa-facebook"></i></a>
+								<a href=""><i class="fa fa-twitter"></i></a>
+								<a href=""><i class="fa fa-envelope"></i></a>
+								<a href=""><i class="fa fa-phone"></i></a>
+								<a href=""><i class="fa fa-google-plus"></i></a>
+								<a href=""><i class="fa fa-linkedin"></i></a>
+								<a href=""><i class="fa fa-pinterest"></i></a>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="copyright text-center">
+			<div class="container">
+				<div class="row">
+					<p class="copyright">Copyright All Rights Reserved. Design by <a href="http://revolthemes.net/" target="_blank">RevolThemes</a> Develop by <a href="https://www.behance.net/obaidhossain" target="_blank">Obaid Hossain</a></p>
+				</div>
+			</div>
+		</div>
+	</section>
+	<!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+    <!-- Include all compiled plugins (below), or include individual files as needed -->
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+	<!-- SLIDER REVOLUTION 4.x SCRIPTS  -->
+    <script type="text/javascript" src="js/jquery.themepunch.tools.min.js"></script>
+    <script type="text/javascript" src="js/jquery.themepunch.revolution.min.js"></script>
+	<!-- Waypoint -->
+	<script src="http://cdnjs.cloudflare.com/ajax/libs/waypoints/2.0.3/waypoints.min.js"></script>
+	<script src="js/jquery.counterup.min.js"></script>
+	<!-- Include Medirev JavaScript -->
+	<script src="js/script.js"></script>
 </body>
 </html>
