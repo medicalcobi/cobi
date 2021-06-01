@@ -20,6 +20,7 @@
 </head>
 
 <body>
+    <!-- navbar -->
 	<header class="header">
 		<div class="container">
 			<div class="container-fluid">
@@ -61,11 +62,11 @@
 				<!-- Collect the nav links, forms, and other content for toggling -->
 				<div class="collapse navbar-collapse" id="navigation">
 				  <ul class="nav navbar-nav">
-					<li class="active"><a href="">Home <span class="sr-only">(current)</span></a></li>
-					<li><a href="#">병원·약국찾기</a></li>
-					<li><a href="#">자가진단</a></li>
-					<li><a href="#">Q&A</a></li>
-					<li><a href="#">의학뉴스</a></li>
+					<li class="active"><a href="/">Home <span class="sr-only">(current)</span></a></li>
+					<li><a href="/searchhospital/">병원·약국찾기</a></li>
+					<li><a href="/self/">자가진단</a></li>
+					<li><a href="/qna/">Q&A</a></li>
+					<li><a href="/blog/">의학뉴스</a></li>
 					<li><a href="#">의약품조회</a></li>
 				  </ul>
 				  <ul class="nav navbar-nav navbar-right">
@@ -76,6 +77,8 @@
 			</nav>
 		</div>
 	</header>
+	<!-- navbar -->
+
 	<!--
 	#################################
 		- THEMEPUNCH BANNER -
@@ -83,10 +86,10 @@
 	-->
 	<div class="slider-container">
 		<div class="slider" >
-			<ul>	<!-- SLIDE  -->
-	<li data-transition="fade" data-slotamount="5" data-masterspeed="500" data-thumb="homeslider_thumb1.jpg"  data-saveperformance="on"  data-title="Intro Slide">
+			<ul style="list-style-type:none;">	<!-- SLIDE  -->
+
 		<!-- MAIN IMAGE -->
-		<img src="img/dummy.png"  alt="slidebg1" data-lazyload="img/slider-bg.png" data-bgposition="center top" data-bgfit="cover" data-bgrepeat="no-repeat">
+		<img src="{% static 'single_pages/images/index_.png' %}">
 		<!-- LAYERS -->
 
 		<!-- LAYER NR. 1 -->
@@ -99,45 +102,9 @@
 			data-easing="Power3.easeInOut"
 			data-elementdelay="0.1"
 			data-endelementdelay="0.1"
-			style="z-index: 2;"><img src="img/dummy.png" alt="" data-lazyload="img/doctor.png">
+			style="z-index: 2;"><img src="{% static 'single_pages/images/dummy.png' %}" alt="" data-lazyload="{% static 'single_pages/images/doctor.png' %}">
 		</div>
-		<!-- LAYER NR. 2 -->
-		<div class="tp-caption hdcptn"
-			data-x="310"
-			data-y="220"
-			data-customout="x:0;y:0;z:0;rotationX:0;rotationY:0;rotationZ:0;scaleX:0.75;scaleY:0.75;skewX:0;skewY:0;opacity:0;transformPerspective:600;transformOrigin:50% 50%;"
-			data-speed="500"
-			data-start="1110"
-			data-easing="Power3.easeInOut"
-			data-elementdelay="0.1"
-			data-endelementdelay="0.1"
-			style="z-index: 2;">집에서도 편하게 !<br/>내 건강은 내가 지킨다
-		</div>
-		<!-- LAYER NR. 3 -->
-		<div class="tp-caption dscptn"
-			data-x="310"
-			data-y="320"
-			data-customout="x:0;y:0;z:0;rotationX:0;rotationY:0;rotationZ:0;scaleX:0.75;scaleY:0.75;skewX:0;skewY:0;opacity:0;transformPerspective:600;transformOrigin:50% 50%;"
-			data-speed="500"
-			data-start="1110"
-			data-easing="Power3.easeInOut"
-			data-elementdelay="0.1"
-			data-endelementdelay="0.1"
-			style="z-index: 2;">코로나 19로 병원 가기가 걱정된다면, 작은 증상 하나에도 건강이 염려된다면<br> 자가진단 서비스와 의료진과의 1:1 Q&A로 집에서 간단하게 건강을 체크하세요.  <br>※자가진단서비스는 건강상태를 예측하는 서비스입니다. 정확한 건강 진단은<br> 의료진과의 상담이 필요합니다.
-		</div>
-		<!-- LAYER NR. 4 -->
-		<div class="tp-caption btnsrvc btn btn-default"
-			data-x="310"
-			data-y="420"
-			data-customout="x:0;y:0;z:0;rotationX:0;rotationY:0;rotationZ:0;scaleX:0.75;scaleY:0.75;skewX:0;skewY:0;opacity:0;transformPerspective:600;transformOrigin:50% 50%;"
-			data-speed="500"
-			data-start="1110"
-			data-easing="Power3.easeInOut"
-			data-elementdelay="0.1"
-			data-endelementdelay="0.1"
-			style="z-index: 2;"> <a href="">자세히 알아보기</a>
-		</div>
-		<!-- LAYER NR. 5 -->
+
 		<div class="tp-caption gtapntmnt-bg"
 			data-x="820"
 			data-y="80"
@@ -147,70 +114,9 @@
 			data-easing="Power3.easeInOut"
 			data-elementdelay="0.1"
 			data-endelementdelay="0.1"
-			style="z-index: 2;"> <img src="img/get-appointment.png" alt="" />
+			style="z-index: 2;"> <img src="single_pages/images/get-appointment.png" alt="" />
 		</div>
-		<!-- LAYER NR. 6 -->
-		<div class="tp-caption oswaldhd text-center"
-			data-x="852"
-			data-y="132"
-			data-customout="x:0;y:0;z:0;rotationX:0;rotationY:0;rotationZ:0;scaleX:0.75;scaleY:0.75;skewX:0;skewY:0;opacity:0;transformPerspective:600;transformOrigin:50% 50%;"
-			data-speed="500"
-			data-start="1350"
-			data-easing="Power3.easeInOut"
-			data-elementdelay="0.1"
-			data-endelementdelay="0.1"
-			style="z-index: 2;"> 의사와 1:1상담을 원한다면? <br/> 온라인 비대면진료로 편하게!
-		</div>
-		<!-- LAYER NR. 7 -->
-		<div class="tp-caption btnappnt btn btn-default"
-			data-x="900"
-			data-y="230"
-			data-customout="x:0;y:0;z:0;rotationX:0;rotationY:0;rotationZ:0;scaleX:0.75;scaleY:0.75;skewX:0;skewY:0;opacity:0;transformPerspective:600;transformOrigin:50% 50%;"
-			data-speed="500"
-			data-start="1350"
-			data-easing="Power3.easeInOut"
-			data-elementdelay="0.1"
-			data-endelementdelay="0.1"
-			style="z-index: 2;"> <a href="">Q&A 작성 후 1:1 신청하기</a>
-		</div>
-		<!-- LAYER NR. 8 -->
-		<div class="tp-caption oswaldhd text-center"
-			data-x="925"
-			data-y="330"
-			data-customout="x:0;y:0;z:0;rotationX:0;rotationY:0;rotationZ:0;scaleX:0.75;scaleY:0.75;skewX:0;skewY:0;opacity:0;transformPerspective:600;transformOrigin:50% 50%;"
-			data-speed="500"
-			data-start="1350"
-			data-easing="Power3.easeInOut"
-			data-elementdelay="0.1"
-			data-endelementdelay="0.1"
-			style="z-index: 2;">진료 가능 시간
-		</div>
-		<!-- LAYER NR. 9 -->
-		<div class="tp-caption text-center apntmntdtls"
-			data-x="883"
-			data-y="372"
-			data-customout="x:0;y:0;z:0;rotationX:0;rotationY:0;rotationZ:0;scaleX:0.75;scaleY:0.75;skewX:0;skewY:0;opacity:0;transformPerspective:600;transformOrigin:50% 50%;"
-			data-speed="500"
-			data-start="1350"
-			data-easing="Power3.easeInOut"
-			data-elementdelay="0.1"
-			data-endelementdelay="0.1"
-			style="z-index: 2;"> Q&A상담은 24시간 언제나 가능합니다
-		</div>
-		<!-- LAYER NR. 10 -->
-		<div class="tp-caption apntmntdtls"
-			data-x="865"
-			data-y="400"
-			data-customout="x:0;y:0;z:0;rotationX:0;rotationY:0;rotationZ:0;scaleX:0.75;scaleY:0.75;skewX:0;skewY:0;opacity:0;transformPerspective:600;transformOrigin:50% 50%;"
-			data-speed="500"
-			data-start="1350"
-			data-easing="Power3.easeInOut"
-			data-elementdelay="0.1"
-			data-endelementdelay="0.1"
-			style="z-index: 2;">
-			 1 : 1진료 운영시간&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;07:00am - 12:00am<br/>
-		 	 고객센터 운영시간  &nbsp;&nbsp;&nbsp;&nbsp;09:00am - 06:00pm
-		</div>
+
 	</li>
 			</ul>
 			<div class="tp-bannertimer"></div>
@@ -222,15 +128,15 @@
 			<p class="col-md-10 col-md-offset-1">코비는 국내 병원·약국 검색과 연계 병원의 의료진 프로필 열람이 가능합니다. 또한, 간단한 자가진단 서비스부터 의료진이 직접 답변해주는 Q&A 서비스를 제공합니다. 더 나아가 1:1 비대면 진료 서비스를 통하여 병원에 가지 않고도 의사와의 직접적인 상담이 가능합니다.  </p>
 			<div class="col-md-4 col-sm-4 single-service">
 				<i class="fa fa-ambulance"></i>
-				<h3 class="service-text">병원·약국 찾기</h2>
+				<h3 class="service-text">병원·약국 찾기</h3>
 			</div>
 			<div class="col-md-4 col-sm-4 single-service">
 				<i class="fa fa-stethoscope"></i>
-				<h3 class="service-text">자가진단하기</h2>
+				<h3 class="service-text">자가진단하기</h3>
 			</div>
 			<div class="col-md-4 col-sm-4 single-service">
 				<i class="fa fa-calendar"></i>
-				<h3 class="service-text">의사와 상담하기</h2>
+				<h3 class="service-text">의사와 상담하기</h3>
 			</div>
 		</div>
 	</section>
@@ -312,7 +218,7 @@
 					<h2>COBI Medical Information</h2>
 					<p class="col-md-10 col-md-offset-1">코비는 의료진을 통해 의학적인 검증을 마친 신뢰도 높은 정보를 선별하여 제공합니다.</p>
 					<div class="col-md-6 col-sm-6 col-xs-12">
-						<a href="" class="no-hover">
+						<a href="/blog/" class="no-hover">
 							<div class="single-advantage" style="background-image:url('img/healthcare.jpg');">
 								<h3>의학 뉴스<br>COBI Medical Journal</h3>
 							</div>
@@ -337,7 +243,7 @@
 					<p class="col-md-10 col-md-offset-1">2021년 4월 Q&A 및 1:1 상담에서 환자들이 가장 만족한 세 명의 의사를 소개합니다.</p>
 					<div class="col-md-4 col-sm-4 col-xs-12">
 						<div class="single-doctor">
-							<div class="doctor-image"><img src="img/doctor-1.jpg" alt="" /></div>
+							<div class="doctor-image"><img src="{% static 'single_pages/images/doctor-1.jpg' %}" alt="" /></div>
 							<div class="doctor-details">
 								<h4 class="name">인천칼국수병원 이유림</h4>
 								<p class="designation">Q&A 가장 많은 답변 수</p>
@@ -352,7 +258,7 @@
 					</div>
 					<div class="col-md-4 col-sm-4 col-xs-12">
 						<div class="single-doctor">
-							<div class="doctor-image"><img src="img/doctor-2.jpg" alt="" /></div>
+							<div class="doctor-image"><img src="{% static 'single_pages/images/doctor-2.jpg' %}" alt="" /></div>
 							<div class="doctor-details">
 								<h4 class="name">천안호두병원 김서연</h4>
 								<p class="designation">Q&A 가장 높은 채택율</p>
@@ -367,7 +273,7 @@
 					</div>
 					<div class="col-md-4 col-sm-4 col-xs-12">
 						<div class="single-doctor">
-							<div class="doctor-image"><img src="img/doctor-3.jpg" alt="" /></div>
+							<div class="doctor-image"><img src="{% static 'single_pages/images/doctor-3.jpg' %}" alt="" /></div>
 							<div class="doctor-details">
 								<h4 class="name">병점꿀떡병원 고윤아</h4>
 								<p class="designation">1:1진료 가장 높은 만족도</p>
@@ -421,7 +327,7 @@
 			<div class="blog-posts">
 				<div class="col-md-4 col-sm-4 col-xs-12">
 					<div class="single-post">
-						<img src="img/blog-post-1.jpg" alt="" />
+						<img src="{% static 'single_pages/images/blog-post-1.jpg' %}" alt="" />
 						<div class="post-date">2021-05-11</div>
 						<div class="post-details">
 							<p class="title">"코로나 접종, 중증 이상반응 인과성 없어도 지원"
@@ -434,7 +340,7 @@
 				</div>
 				<div class="col-md-4 col-sm-4 col-xs-12">
 					<div class="single-post">
-						<img src="img/blog-post-2.jpg" alt="" />
+						<img src="{% static 'single_pages/images/blog-post-2.jpg' %}" alt="" />
 						<div class="post-date">2021-05-11</div>
 						<div class="post-details">
 							<p class="title">의료기기사들 '빅딜' 러시… 데이터 확보전 치열
@@ -447,7 +353,7 @@
 				</div>
 				<div class="col-md-4 col-sm-4 col-xs-12">
 					<div class="single-post">
-						<img src="img/blog-post-3.jpg" alt="" />
+						<img src="{% static 'single_pages/images/blog-post-3.jpg' %}" alt="" />
 						<div class="post-date">2021-05-11</div>
 						<div class="post-details">
 							<p class="title">식약처 검증자문단, 모더나 코로나 백신 허가 권고
@@ -461,6 +367,9 @@
 			</div>
 		</div>
 	</section>
+
+
+	<!-- footer -->
 	<section class="footer">
 		<div class="widget">
 			<div class="container">
@@ -518,14 +427,9 @@
 				</div>
 			</div>
 		</div>
-		<div class="copyright text-center">
-			<div class="container">
-				<div class="row">
-					<p class="copyright">Copyright All Rights Reserved. Design by <a href="http://revolthemes.net/" target="_blank">RevolThemes</a> Develop by <a href="https://www.behance.net/obaidhossain" target="_blank">Obaid Hossain</a></p>
-				</div>
-			</div>
-		</div>
-	</section>
+		</section>
+    <!-- footer -->
+
 	<!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
     <!-- Include all compiled plugins (below), or include individual files as needed -->

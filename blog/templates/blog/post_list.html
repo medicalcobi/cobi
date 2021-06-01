@@ -53,9 +53,8 @@
 <main class="container">
   <div class="p-4 p-md-5 mb-4 text-white rounded bg-dark">
     <div class="col-md-6 px-0">
-      <h1 class="display-4 fst-italic">혈전 발생 논란속 '1회 접종' 얀센 백신은 안전할까?</h1>
-      <p class="lead my-3">|모더나·화이자 백신, 1회 접종 예방률 80% 기록<br>|전문가들 "면역 지속성·보관 용이성 등 따져야"</p>
-      <p class="lead mb-0"><a href="#" class="text-white fw-bold">자세한 내용 보기</a></p>
+      <h1 class="display-4 fst-italic">의학 뉴스</h1>
+
     </div>
   </div>
 
@@ -68,7 +67,7 @@
       </div>
       <div class="col-md-8">
         <div class="card-body">
-          <h5 class="card-title">{{ p.title }}</h5>
+          <h5 class="card-title"><b>{{ p.title }}</b></h5>
           <p class="card-text">{{ p.content | truncatewords:10 }}</p>
           <p class="card-text"><small class="text-muted">{{ p.created_at }}</small></p>
           <a class="btn btn-primary" href="{{ p.get_absolute_url }}" role="button">자세히 보기</a>
@@ -78,16 +77,6 @@
   </div>
    </div>
   {% endfor %}
-
-
-
-  <nav class="blog-pagination" aria-label="Pagination">
-    <a class="btn btn-outline-primary" href="#">이전 페이지</a>
-    <a class="btn btn-outline-secondary disabled" href="{{ p.get_absolute_url }}" tabindex="-1" aria-disabled="true">다음 페이지</a>
-  </nav>
-
-
-
 </main><!-- /.container -->
 
 {% include 'blog/footer.html' %}

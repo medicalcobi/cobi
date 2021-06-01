@@ -10,12 +10,6 @@
 <style>
     *{padding:0%; margin:0%;}
 
-    .nav{background-color: rgb(20, 20, 100); color: white;
-    padding: 20px;}
-
-    .container{background-color: white; margin-bottom: 40px; margin-top: 10px;
-    }
-
     li{list-style-type: none;}
 
     .all button{float: right; margin: 5px;}
@@ -30,18 +24,15 @@
 
     .pa{margin-left: 650px; margin-top: 40px; margin-bottom: 40px;}
 
-    footer{background-color: rgb(66, 67, 73);
-    padding: 50px;}
 
 </style>
 <title>COBI Q&A 전체페이지</title>
 </head>
 
 <body>
-    <nav class="nav">
-        cobi
-    </nav>
+    {% include 'blog/navbar.html' %}
 
+<div class="container">
    <div class="search">
       <!-- As a link -->
      <nav class="navbar navbar-light bg-light">
@@ -52,17 +43,18 @@
             <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
 
                 <div class="dropdown">
-
-
+                    {% if user.is_authenticated %}
+                    {% if user.is_superuser or user.is_staff %}
                         <div class="button2">
-                            <a href="#" class="btn btn-primary">Q&A 하기</a>
+                            <a href="/qna/create_post/" class="btn btn-primary">Q&A 하기</a>
                         </div>
-                    </div>
+                    {% endif %}
+                    {% endif %}
                 </div>
-
 
         </form>
      </nav>
+    </div>
     </div>
 
     <div class="container mb-10">
@@ -72,10 +64,12 @@
                     <a href="#" class="list-group-item list-group-item-action active" aria-current="true">
                     Q&A 카테고리
                     </a>
-                    <a href="#" class="list-group-item list-group-item-action">코로나 19 관련</a>
-                    <a href="#" class="list-group-item list-group-item-action">질병 관련</a>
-                    <a href="#" class="list-group-item list-group-item-action">의약품 관련</a>
-                    <a href="#" class="list-group-item list-group-item-action">건강지식 관련</a>
+                    {% for category in categories %}
+                    <a href="{{ category.get_absolute_url }}" class="list-group-item list-group-item-action">{{ category }}
+                        ({{ category.post_set.count }})</a>
+                    {% endfor %}
+                    <a href="/blog/category/no_category/" class="list-group-item list-group-item-action">기타 의료 질문
+                        ({{ no_category_post_count }})</a>
                 </div>
             </li>
         </ul>
@@ -100,9 +94,14 @@
 
             <tr>
                 <th scope="row">{{ p.created_at }}</th>
+
                 <td><a href="{{ p.get_absolute_url }}">{{ p.title }}</a></td>
-                <td>{{ p.context }}</td>
-                <td>ㅁㅁㅁ</td>
+                <td id="post-{{ p.pk }}">{{ p.context }}</td>
+                {% if p.category %}
+                <td><a href="#">{{ p.author | upper }}</a> <span class="badge badge-secondary float-right">{{ p.category }}</span> </td>
+                {% else %}
+                <td><a href="#">{{ p.author | upper }}</a> <span class="badge badge-secondary float-right">미분류</span> </td>
+                {% endif %}
             </tr>
             </tbody>
             {% endfor %}
@@ -131,11 +130,7 @@
         </nav>
    </div>
 
-
-
-    <footer>
-        푸터
-    </footer>
+{% include 'blog/footer.html' %}
 
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>

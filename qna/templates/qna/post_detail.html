@@ -10,9 +10,6 @@
 <style>
     *{padding:0%; margin:0%;}
 
-    .nav{background-color: rgb(20, 20, 100); color: white;
-    padding: 20px;}
-
     li{list-style-type: none;}
 
     .all button{float: right; margin: 5px;}
@@ -30,9 +27,6 @@
 
     .co-3{}
 
-    footer{background-color: rgb(66, 67, 73);
-    padding: 50px;}
-
 </style>
 
 <title>COBI Q&A 개별페이지</title>
@@ -41,10 +35,9 @@
 
 
 <body>
-    <nav class="nav">
-        cobi
-    </nav>
+   {% include 'blog/navbar.html' %}
 
+   <div class="container">
    <div class="search">
       <!-- As a link -->
      <nav class="navbar navbar-light bg-light">
@@ -56,14 +49,12 @@
 
                 <div class="dropdown">
 
-
-                        <div class="button2">
-                            <button type="button" class="btn btn-primary">Q&A 하기</button>
-                        </div>
-                    </div>
+                    <a href="/qna/update_post/{{ post.pk }}/" class="btn btn-primary">Q&A 수정하기</a>
                 </div>
+
         </form>
      </nav>
+    </div>
     </div>
 
     <div id="main-area">
@@ -73,13 +64,26 @@
                 <div class="card mb-3">
 
                 {% if post.head_image %}
-                <img class="img-fluid rounded" src="{{ post.head_image.url }}" alt="{{ post.title }} head image">
+                <img class="img-fluid rounded" src="{{ post.head_image.url }}" alt="{{ post.title }} head_image">
                 {% else %}
                 <img class="img-fluid rounded" src="http://picsum.photos/seed/{{ post.id }}/800/200" alt="random image">
                 {% endif %}
 
+                    <p class="lead">
+                        by
+                        <a href="#">{{ post.author | upper }}</a>
+                    </p>
+
+                    <div class="container">
+                    {% if post.category %}
+                    <span class="badge badge-secondary float-right">{{ post.category }}</span> </td>
+                    {% else %}
+                    <span class="badge badge-secondary float-right">미분류</span> </td>
+                    {% endif %}
+                    </div>
+
                     <div class="card-body">
-                    <h5 class="card-title">{{ post.title }}</h5>
+                        <h5 class="card-title"><b>{{ post.title }}</b></h5>
                     <p class="card-text">{{ post.context }}</p>
                     <p class="card-text"><small class="text-muted">{{ post.created_at }}</small></p>
                     </div>
@@ -144,16 +148,7 @@
         </div>
     </div>
 
-
-
-
-
-
-
-
-    <footer>
-        푸터
-    </footer>
+   {% include 'blog/footer.html' %}
 
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>

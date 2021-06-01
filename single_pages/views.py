@@ -13,6 +13,30 @@ def qqq(request):
         'single_pages/qqq.html'
     )
 
+def searchhospital(request):
+    return render(
+        request,
+        'single_pages/searchhospital.html'
+    )
+
+def search_hospital_seoul(request):
+    return render(
+        request,
+        'single_pages/search_hospital_seoul.html'
+    )
+
+def search_hospital_incheon(request):
+    return render(
+        request,
+        'single_pages/search_hospital_incheon.html'
+    )
+
+def search_hospital_busan(request):
+    return render(
+        request,
+        'single_pages/search_hospital_busan.html'
+    )
+
 def self(request):
     return render(
         request,
