@@ -42,3 +42,9 @@ def self(request):
         request,
         'single_pages/self.html'
     )
+
+def post_one_list(request):
+    return render(
+        request,
+        'single_pages/post_one_list.html'
+    )

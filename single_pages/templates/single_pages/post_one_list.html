@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+{% load static %}
+{% load crispy_forms_tags %}
+<html>
+<head>
+
+</head>
+
+<body>
+
+{% include 'blog/navbar.html' %}
+
+{% block main_area %}
+   <h1>COBI 1:1 상담</h1>
+   <hr/>
+
+<div class="container">
+   <form method="post" enctype="multipart/form-data">{% csrf_token %}
+     <table>
+         {{ form | crispy }}
+         <div id="div_id_tags_str">
+             <label for="id_tags_str">상담 사유:</label>
+             <input type="text" name="tags_str" id="id_tags_str" class="textinput textInput form-control">
+         </div>
+         <br/>
+         <div id="div_id_tags_str">
+             <label for="id_tags_str">병원:</label>
+             <input type="text" name="tags_str" id="id_tags_str" class="textinput textInput form-control">
+         </div>
+         <br/>
+         <div id="div_id_tags_str">
+             <label for="id_tags_str">의료진:</label>
+             <input type="text" name="tags_str" id="id_tags_str" class="textinput textInput form-control">
+         </div>
+         <br/>
+         <div id="div_id_tags_str">
+             <label for="id_tags_str">상세 정보:</label>
+             <input type="text" name="tags_str" id="id_tags_str" class="textinput textInput form-control">
+         </div>
+         <br/>
+     </table>
+     <button type="submit" class="btn btn-primary float-right">Submit</button>
+   </form>
+{% endblock %}
+    </div>
+
+
+{% include 'blog/footer.html' %}
+</body>
+</html>

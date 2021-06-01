@@ -93,14 +93,12 @@
             </tr>
             </thead>
 
-            {% for p in post_list %}
+           {% for p in post_list %}
             <tbody>
-
             <tr>
                 <th scope="row">{{ p.created_at }}</th>
-
-                <td><a href="{{ p.get_absolute_url }}">{{ p.title }}</a></td>
-                <td id="post-{{ p.pk }}">{{ p.context }}</td>
+                <td><a href="{{ p.get_absolute_url }}">{{ p.title | truncatechars:10 }}</a></td>
+                <td id="post-{{ p.pk }}">{{ p.context | truncatechars:10 }}</td>
                 {% if p.category %}
                 <td><a href="#">{{ p.author | upper }}</a> <span class="badge badge-secondary float-right">{{ p.category }}</span> </td>
                 {% else %}
