@@ -77,8 +77,12 @@
 
     <hr>
 
+
+
     <div class="list">
         <div class="container">
+            <h1>Q&A {% if category %}<span class="badge badge-secondary">{{ category }}</span>
+    {% endif %}</h1>
         <table class="table">
             <thead>
             <tr>
@@ -100,7 +104,7 @@
                 {% if p.category %}
                 <td><a href="#">{{ p.author | upper }}</a> <span class="badge badge-secondary float-right">{{ p.category }}</span> </td>
                 {% else %}
-                <td><a href="#">{{ p.author | upper }}</a> <span class="badge badge-secondary float-right">미분류</span> </td>
+                <td><a href="#">{{ p.author | upper }}</a> <span class="badge badge-secondary float-right">기타 의료 질문</span> </td>
                 {% endif %}
             </tr>
             </tbody>

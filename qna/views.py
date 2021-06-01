@@ -27,7 +27,7 @@ class PostDetail(DetailView):
 
 class PostCreate(LoginRequiredMixin, UserPassesTestMixin, CreateView):
     model = Post
-    fields = ['title', 'context']
+    fields = ['title', 'context', 'category']
 
     def form_valid(self, form):
         current_user = self.request.user
@@ -42,7 +42,7 @@ class PostCreate(LoginRequiredMixin, UserPassesTestMixin, CreateView):
 
 class PostUpdate(LoginRequiredMixin, UpdateView):
     model = Post
-    fields = ['title', 'context']
+    fields = ['title', 'context', 'category']
 
     template_name = 'qna/post_update_form.html'
 
@@ -51,6 +51,27 @@ class PostUpdate(LoginRequiredMixin, UpdateView):
             return super(PostUpdate, self).dispatch(request, *args, **kwargs)
         else:
             raise PermissionDenied
+
+
+def category_page(request, slug):
+    if slug == 'no_category':
+        category = '기타 의료 질문'
+        post_list = Post.objects.filter(category=None)
+    else:
+        category = Category.objects.get(slug=slug)
+        post_list = Post.objects.filter(category=category)
+
+
+    return render(
+        request,
+        'qna/post_list.html',
+        {
+            'post_list': post_list,
+            'categories': Category.objects.all(),
+            'no_category_post_count': Post.objects.filter(category=None).count(),
+            'category': category,
+        }
+    )
 
 
 # def index(request):
