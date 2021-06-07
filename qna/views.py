@@ -27,7 +27,7 @@ class PostDetail(DetailView):
 
 class PostCreate(LoginRequiredMixin, UserPassesTestMixin, CreateView):
     model = Post
-    fields = ['title', 'context', 'category']
+    fields = ['title', 'context', 'head_image', 'category']
 
     def form_valid(self, form):
         current_user = self.request.user
@@ -42,7 +42,7 @@ class PostCreate(LoginRequiredMixin, UserPassesTestMixin, CreateView):
 
 class PostUpdate(LoginRequiredMixin, UpdateView):
     model = Post
-    fields = ['title', 'context', 'category']
+    fields = ['title', 'context', 'head_image', 'category']
 
     template_name = 'qna/post_update_form.html'
 

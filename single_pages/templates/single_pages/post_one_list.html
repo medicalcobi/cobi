@@ -3,7 +3,9 @@
 {% load crispy_forms_tags %}
 <html>
 <head>
-
+<style>
+    .container{ margin: 50px;}
+</style>
 </head>
 
 <body>
@@ -11,7 +13,9 @@
 {% include 'blog/navbar.html' %}
 
 {% block main_area %}
+<div class="container">
    <h1>COBI 1:1 상담</h1>
+</div>
    <hr/>
 
 <div class="container">
@@ -19,31 +23,68 @@
      <table>
          {{ form | crispy }}
          <div id="div_id_tags_str">
-             <label for="id_tags_str">상담 사유:</label>
-             <input type="text" name="tags_str" id="id_tags_str" class="textinput textInput form-control">
+             <label for="id_tags_str">이름(필수) :</label>
+             <input type="text" name="tags_str" id="id_taegs_str" class="textinput textInput form-control">
          </div>
          <br/>
-         <div id="div_id_tags_str">
-             <label for="id_tags_str">병원:</label>
-             <input type="text" name="tags_str" id="id_tags_str" class="textinput textInput form-control">
+         <div id="div_id_trgs_str">
+             <label for="id_tags_str">전화번호(필수) :</label>
+             <input type="text" name="tags_str" id="id_tages_str" class="textinput textInput form-control">
          </div>
          <br/>
-         <div id="div_id_tags_str">
-             <label for="id_tags_str">의료진:</label>
-             <input type="text" name="tags_str" id="id_tags_str" class="textinput textInput form-control">
+         <div id="div_id_tasgss_str">
+             <label for="id_tags_str">이메일(필수) :</label>
+             <input type="text" name="tags_str" id="id_teags_str" class="textinput textInput form-control">
          </div>
          <br/>
-         <div id="div_id_tags_str">
-             <label for="id_tags_str">상세 정보:</label>
+         <div id="div_id_tagse_str">
+             <label for="id_tags_str">날짜 :</label>
+             <input type="text" name="tags_str" id="id_tagss_str" class="textinput textInput form-control">
+         </div>
+         <br/>
+         <div id="div_id_tasgs_str">
+             <label for="id_tags_str">시간대 :</label>
+             <input type="text" name="tags_str" id="id_tagse_str" class="textinput textInput form-control">
+         </div>
+         <br/>
+         <div id="div_id_tagss_str">
+             <label for="id_tags_str">병원 위치 :</label>
+             <input type="text" name="tags_str" id="id_tadgs_str" class="textinput textInput form-control">
+         </div>
+         <br/>
+         <div id="div_id tags_str">
+             <label for="id_tags_str">증상, 발현 기간, 복용 중인 약품등을 최대한 자세히 작성해 주세요. :</label>
              <input type="text" name="tags_str" id="id_tags_str" class="textinput textInput form-control">
          </div>
          <br/>
      </table>
-     <button type="submit" class="btn btn-primary float-right">Submit</button>
-   </form>
-{% endblock %}
-    </div>
 
+       <!-- Button trigger modal -->
+        <a class="btn btn-primary" href='/post_one_list2/' role="button" style="float: right;">1:1 상담 신청하기</a>
+
+        <!-- Modal -->
+        <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+          <div class="modal-dialog">
+            <div class="modal-content">
+              <div class="modal-header">
+                <h5 class="modal-title" id="exampleModalLabel">1:1상담 신청 완료</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+              </div>
+              <div class="modal-body">
+                상담이 신청되었습니다.
+              </div>
+              <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+
+              </div>
+            </div>
+          </div>
+        </div>
+
+</form>
+
+{% endblock %}
+</div>
 
 {% include 'blog/footer.html' %}
 </body>

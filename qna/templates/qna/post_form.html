@@ -3,7 +3,9 @@
 {% load crispy_forms_tags %}
 <html>
 <head>
-
+<style>
+    .container{ margin: 50px;}
+</style>
 </head>
 
 <body>
@@ -11,7 +13,9 @@
 {% include 'blog/navbar.html' %}
 
 {% block main_area %}
+<div class="container">
    <h1>Create New Post</h1>
+</div>
    <hr/>
 
 <div class="container">

@@ -9,5 +9,6 @@ urlpatterns = [
     path('search_hospital_incheon/', views.search_hospital_incheon),
     path('search_hospital_busan/', views.search_hospital_busan),
     path('post_one_list/', views.post_one_list),
+    path('post_one_list2/', views.post_one_list2),
     path('', views.landing),
 ]
